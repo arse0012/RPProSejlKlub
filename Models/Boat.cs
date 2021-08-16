@@ -18,7 +18,6 @@ namespace ProtoBoatRazorPage.Models
         [Required(ErrorMessage = "Dato skal sættes")]
         public DateTime DateTime { get; set; }
         public string ImageName { get; set; }
-        public Dictionary<int, Boat> BoatList { get; set; }
 
     }
 }

@@ -89,6 +89,7 @@ namespace ProtoBoatRazorPage.Repository
             foundBoat.Type = boat.Type;
             foundBoat.Description = boat.Description;
             foundBoat.DateTime = boat.DateTime;
+            foundBoat.ImageName = boat.ImageName;
             JsonFileWritter.WriteToJsonBoat(boats, JsonFileName);
         }
     }

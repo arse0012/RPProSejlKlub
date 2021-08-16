@@ -5,8 +5,7 @@
     "Name": "Cruise",
     "Description": "Long use",
     "DateTime": "2021-08-16T00:00:00",
-    "ImageName": null,
-    "BoatList": null
+    "ImageName": "GkagDqux-boat.jfif"
   },
   "2": {
     "Id": 2,
@@ -14,34 +13,22 @@
     "Name": "MyQueen",
     "Description": "Royal",
     "DateTime": "2021-08-16T00:00:00",
-    "ImageName": null,
-    "BoatList": null
+    "ImageName": "OceanBoat.jfif"
   },
   "3": {
     "Id": 3,
-    "Type": "wge",
-    "Name": "frae",
-    "Description": "e",
+    "Type": "Electric-wood",
+    "Name": "Revenge",
+    "Description": "Small, but fast",
     "DateTime": "2021-08-16T00:00:00",
-    "ImageName": null,
-    "BoatList": null
+    "ImageName": "Elwood-electric-woodenboat.jfif"
   },
   "4": {
     "Id": 4,
     "Type": "f2f",
     "Name": "cakvjw",
-    "Description": "fwe",
+    "Description": "Small, but fast",
     "DateTime": "2021-08-16T01:05:00",
-    "ImageName": null,
-    "BoatList": null
-  },
-  "5": {
-    "Id": 5,
-    "Type": "Cruies",
-    "Name": "Ship",
-    "Description": null,
-    "DateTime": "0001-01-01T00:00:00",
-    "ImageName": null,
-    "BoatList": null
+    "ImageName": "Boat.jfif"
   }
 }

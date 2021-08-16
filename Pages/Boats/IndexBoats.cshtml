@@ -6,7 +6,7 @@
 
 <h1>Boats</h1>
 <p>
-    <a asp-page="CreateBoat">Add new Boat</a>
+    <a asp-page="CreateBoat" class="btn btn-primary">Add new Boat</a>
 </p>
 <form>
     <p>
@@ -32,6 +32,9 @@
             <th>
                 Billede
             </th>
+            <th>
+                Options
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -51,12 +54,12 @@
                 @item.Value.Description
             </td>
             <td>
-                @item.Value.ImageName
+                <img src="~/Boats/@item.Value.ImageName" width="80" height="70"/>
             </td>
             <td>
                 <p>
-                    <a asp-page="EditBoat" asp-route-id="@item.Key">Edit</a>
-                    <a asp-page="DeleteBoat" asp-route-id="@item.Key">Delete</a>
+                    <a asp-page="EditBoat" asp-route-id="@item.Key" class="btn btn-primary">Edit</a>
+                    <a asp-page="DeleteBoat" asp-route-id="@item.Key" class="btn btn-primary">Delete</a>
                 </p>
             </td>
         </tr>
