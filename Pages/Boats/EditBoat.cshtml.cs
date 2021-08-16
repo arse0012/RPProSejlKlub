@@ -13,16 +13,16 @@ namespace ProtoBoatRazorPage.Pages.Boats
     public class EditBoatModel : PageModel
     {
         //private BoatCatalog catalog;
-        private IBoatRepository catalog;
+        private readonly IBoatRepository _boatCatalog;
         [BindProperty]
         public Boat Boat { get; set; }
         public EditBoatModel(IBoatRepository repository)
         {
-            catalog = repository;
+            _boatCatalog = repository;
         }
         public IActionResult OnGet(int id)
         {
-            Boat = catalog.GetBoat(id);
+            Boat = _boatCatalog.GetBoat(id);
             return Page();
         }
         public IActionResult OnPost()
@@ -31,7 +31,7 @@ namespace ProtoBoatRazorPage.Pages.Boats
             {
                 return Page();
             }
-            catalog.UpdateBoat(Boat);
+            _boatCatalog.UpdateBoat(Boat);
             return RedirectToPage("IndexBoats");
         }
     }

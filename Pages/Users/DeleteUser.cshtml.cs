@@ -13,21 +13,21 @@ namespace ProtoBoatRazorPage.Pages.Users
     public class DeleteUserModel : PageModel
     {
         //private UserCatalog catalog;
-        private IUserRepository catalog;
+        private readonly IUserRepository _userCatalog;
         [BindProperty]
-        public User boatUser { get; set; }
+        public User BoatUser { get; set; }
         public DeleteUserModel(IUserRepository repository)
         {
-            catalog = repository;
+            _userCatalog = repository;
         }
         public IActionResult OnGet(int id)
         {
-            boatUser = catalog.GetUser(id);
+            BoatUser = _userCatalog.GetUser(id);
             return Page();
         }
         public IActionResult OnPost()
         {
-            catalog.DeleteUser(boatUser);
+            _userCatalog.DeleteUser(BoatUser);
             return RedirectToPage("IndexUser");
         }
     }

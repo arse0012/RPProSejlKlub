@@ -13,21 +13,21 @@ namespace ProtoBoatRazorPage.Pages.Boats
     public class DeleteBoatModel : PageModel
     {
         //private BoatCatalog catalog;
-        private IBoatRepository catalog;
+        private readonly IBoatRepository _boatCatalog;
         [BindProperty]
         public Boat Boat { get; set; }
         public DeleteBoatModel(IBoatRepository repository)
         {
-            catalog = repository;
+            _boatCatalog = repository;
         }
         public IActionResult OnGet(int id)
         {
-            Boat = catalog.GetBoat(id);
+            Boat = _boatCatalog.GetBoat(id);
             return Page();
         }
         public IActionResult OnPost()
         {
-            catalog.DeleteBoat(Boat);
+            _boatCatalog.DeleteBoat(Boat);
             return RedirectToPage("IndexBoats");
         }
     }

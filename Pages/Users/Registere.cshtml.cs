@@ -8,21 +8,21 @@ using ProtoBoatRazorPage.Interfaces;
 using ProtoBoatRazorPage.Models;
 using ProtoBoatRazorPage.Services;
 
-namespace ProtoBoatRazorPage.Pages
+namespace ProtoBoatRazorPage.Pages.Users
 {
     public class RegistereModel : PageModel
     {
         //private UserCatalog catalog;
-        private IUserRepository catalog;
+        private readonly IUserRepository _userCatalog;
         [BindProperty]
-        public User boatUser{ get; set; }
+        public User BoatUser{ get; set; }
         public RegistereModel(IUserRepository repository)
         {
-            catalog = repository;
+            _userCatalog = repository;
         }
         public void OnGet(int id)
         {
-            boatUser = catalog.GetUser(id);
+            BoatUser = _userCatalog.GetUser(id);
         }
         public IActionResult OnPost()
         {
@@ -30,7 +30,7 @@ namespace ProtoBoatRazorPage.Pages
             {
                 return Page();
             }
-            catalog.AddUser(boatUser);
+            _userCatalog.AddUser(BoatUser);
             return RedirectToPage("IndexUser");
         }
     }

@@ -14,20 +14,20 @@ namespace ProtoBoatRazorPage.Pages.Boats
     public class IndexBoatsModel : PageModel
     {
         //private BoatCatalog catalog;
-        private IBoatRepository catalog;
+        private readonly IBoatRepository _boatCatalog;
         public Dictionary<int, Boat> Boats { get; private set; }
         [BindProperty (SupportsGet =true)]
         public string FilterCriteria { get; set; }
         public IndexBoatsModel(IBoatRepository repository)
         {
-            catalog = repository;
+            _boatCatalog = repository;
         }
         public IActionResult OnGet()
         {
-            Boats = catalog.GetAllBoats();
+            Boats = _boatCatalog.GetAllBoats();
             if (!string.IsNullOrEmpty(FilterCriteria))
             {
-                Boats = catalog.FilterBoat(FilterCriteria);
+                Boats = _boatCatalog.FilterBoat(FilterCriteria);
             }
             return Page();
         }

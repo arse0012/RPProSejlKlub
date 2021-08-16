@@ -13,16 +13,16 @@ namespace ProtoBoatRazorPage.Pages.Users
     public class EditUserModel : PageModel
     {
         //private UserCatalog catalog;
-        private IUserRepository catalog;
+        private readonly IUserRepository _userCatalog;
         [BindProperty]
-        public User boatUser { get; set; }
+        public User BoatUser { get; set; }
         public EditUserModel(IUserRepository repository)
         {
-            catalog = repository;
+            _userCatalog = repository;
         }
         public IActionResult OnGet(int id)
         {
-            boatUser = catalog.GetUser(id);
+            BoatUser = _userCatalog.GetUser(id);
             return Page();
         }
         public IActionResult OnPost()
@@ -31,7 +31,7 @@ namespace ProtoBoatRazorPage.Pages.Users
             {
                 return Page();
             }
-            catalog.UpdateUser(boatUser);
+            _userCatalog.UpdateUser(BoatUser);
             return RedirectToPage("IndexUser");
         }
     }

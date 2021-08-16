@@ -13,20 +13,20 @@ namespace ProtoBoatRazorPage.Pages.Users
     public class IndexUserModel : PageModel
     {
         //private UserCatalog catalog;
-        private IUserRepository catalog;
+        private readonly IUserRepository _userCatalog;
         public Dictionary<int, User> Users { get; private set; }
         [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
         public IndexUserModel(IUserRepository repository)
         {
-            catalog = repository;
+            _userCatalog = repository;
         }
         public IActionResult OnGet()
         {
-            Users = catalog.GetAllUsers();
+            Users = _userCatalog.GetAllUsers();
             if (!string.IsNullOrEmpty(FilterCriteria))
             {
-                Users = catalog.FilterUser(FilterCriteria);
+                Users = _userCatalog.FilterUser(FilterCriteria);
             }
             return Page(); 
         }
