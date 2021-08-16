@@ -1,0 +1,67 @@
+﻿@page
+@model ProtoBoatRazorPage.Pages.Users.IndexUserModel
+@{
+    ViewData["Title"] = "IndexUser";
+}
+
+<h1>IndexUser</h1>
+<p>
+    <a asp-page="Registere">Registere</a>
+</p>
+
+<form>
+    <p>
+        Search: <input type="text" asp-for="FilterCriteria"/>
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Fornavn
+            </th>
+            <th>
+                Efternavn
+            </th>
+            <th>
+                Mail
+            </th>
+            <th>
+                telefon
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.Users)
+        {
+        <tr>
+            <td>
+                @item.Value.Id
+            </td>
+            <td>
+                @item.Value.Name
+            </td>
+            <td>
+                @item.Value.LastName
+            </td>
+            <td>
+                @item.Value.Mail
+            </td>
+            <td>
+                @item.Value.PhoneNumber
+            </td>
+            <td>
+                <p>
+                    <a asp-page="EditUser" asp-route-id="@item.Key">Edit</a>
+                    <a asp-page="DeleteUser" asp-route-id="@item.Key">Delete</a>
+                </p>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

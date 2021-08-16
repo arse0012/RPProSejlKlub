@@ -1,0 +1,56 @@
+﻿@page
+@model ProtoBoatRazorPage.Pages.Boats.DeleteBoatModel
+@{
+    ViewData["Title"] = "DeleteBoat";
+}
+
+<h1>DeleteBoat</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <dl>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Boat.Id)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Boat.Id)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Boat.Name)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Boat.Name)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Boat.Type)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Boat.Type)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Boat.Description)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Boat.Description)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Boat.DateTime)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Boat.DateTime)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Boat.ImageName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Boat.ImageName)
+                </dd>
+            </dl>
+            <input type="submit" value="Delete" class="btn btn-danger"/>
+        </form>
+        <div>
+            <a asp-page="IndexBoats">Back to List</a>
+        </div>
+    </div>
+</div>
+

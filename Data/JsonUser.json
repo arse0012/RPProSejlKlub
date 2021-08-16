@@ -1,0 +1,30 @@
+{
+  "1": {
+    "Id": 1,
+    "Name": "Arsen",
+    "LastName": "Niy",
+    "Mail": "as@hotmail.com",
+    "PhoneNumber": 45123478
+  },
+  "2": {
+    "Id": 2,
+    "Name": "Jim",
+    "LastName": "Vster",
+    "Mail": "ves@Gmail.dk",
+    "PhoneNumber": 12345678
+  },
+  "3": {
+    "Id": 3,
+    "Name": "Timmy",
+    "LastName": "Reack",
+    "Mail": "tim@hotmail.com",
+    "PhoneNumber": 98765432
+  },
+  "0": {
+    "Id": 4,
+    "Name": "Paul",
+    "LastName": "Richardsen",
+    "Mail": "Polle@mail.com",
+    "PhoneNumber": 60517531
+  }
+}

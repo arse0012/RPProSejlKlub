@@ -1,0 +1,48 @@
+﻿@page
+@model ProtoBoatRazorPage.Pages.Boats.EditBoatModel
+@{
+    ViewData["Title"] = "EditBoat";
+}
+
+<h1>EditBoat</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="@Model.Boat.Id" />
+            <div class="form-group">
+                <label asp-for="@Model.Boat.Name" class="control-label"></label>
+                <input asp-for="@Model.Boat.Name" class="form-control" />
+                <span asp-validation-for="@Model.Boat.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Boat.Type" class="control-label"></label>
+                <input asp-for="@Model.Boat.Type" class="form-control" />
+                <span asp-validation-for="@Model.Boat.Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Boat.Description" class="control-label"></label>
+                <input asp-for="@Model.Boat.Description" class="form-control" />
+                <span asp-validation-for="@Model.Boat.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Boat.DateTime" class="control-label"></label>
+                <input asp-for="@Model.Boat.DateTime" class="form-control" />
+                <span asp-validation-for="@Model.Boat.DateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Boat.ImageName" class="control-label"></label>
+                <input asp-for="@Model.Boat.ImageName" class="form-control" />
+                <span asp-validation-for="@Model.Boat.ImageName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+        <div>
+            <a asp-page="IndexBoats">Back to List</a>
+        </div>
+    </div>
+</div>
+
+

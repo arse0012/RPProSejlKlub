@@ -1,0 +1,65 @@
+﻿@page
+@model ProtoBoatRazorPage.Pages.Boats.IndexBoatsModel
+@{
+    ViewData["Title"] = "IndexBoats";
+}
+
+<h1>Boats</h1>
+<p>
+    <a asp-page="CreateBoat">Add new Boat</a>
+</p>
+<form>
+    <p>
+        Search: <input type="text" asp-for="FilterCriteria" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Navn
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Billede
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.Boats)
+        {
+        <tr>
+            <td>
+                @item.Value.Id
+            </td>
+            <td>
+                @item.Value.Name
+            </td>
+            <td>
+                @item.Value.Type
+            </td>
+            <td>
+                @item.Value.Description
+            </td>
+            <td>
+                @item.Value.ImageName
+            </td>
+            <td>
+                <p>
+                    <a asp-page="EditBoat" asp-route-id="@item.Key">Edit</a>
+                    <a asp-page="DeleteBoat" asp-route-id="@item.Key">Delete</a>
+                </p>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

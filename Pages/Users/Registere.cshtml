@@ -1,0 +1,44 @@
+﻿@page
+@model RegistereModel
+@using ProtoBoatRazorPage.Models
+@{
+    ViewData["Title"] = "Registere";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Registere</h1>
+        <p>Registere dig i sejlklubben</p>
+    </div>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="None " class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="@Model.boatUser.Name" class="control-label"></label>
+                <input asp-for="@Model.boatUser.Name" class="form-control" />
+                <span asp-validation-for="@Model.boatUser.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.boatUser.LastName" class="control-label"></label>
+                <input asp-for="@Model.boatUser.LastName" class="form-control" />
+                <span asp-validation-for="@Model.boatUser.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.boatUser.Mail" class="control-label"></label>
+                <input asp-for="@Model.boatUser.Mail" class="form-control" />
+                <span asp-validation-for="@Model.boatUser.Mail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.boatUser.PhoneNumber" class="control-label"></label>
+                <input asp-for="@Model.boatUser.PhoneNumber" class="form-control" />
+                <span asp-validation-for="@Model.boatUser.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+        <div>
+            <a asp-page="IndexUser">Back to List</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+﻿@page
+@model ProtoBoatRazorPage.Pages.Users.DeleteUserModel
+@{
+    ViewData["Title"] = "DeleteUser";
+}
+
+<h1>DeleteUser</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <dl>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.boatUser.Id)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.boatUser.Id)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.boatUser.Name)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.boatUser.Name)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.boatUser.LastName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.boatUser.LastName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.boatUser.Mail)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.boatUser.Mail)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.boatUser.PhoneNumber)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.boatUser.PhoneNumber)
+                </dd>
+            </dl>
+            <input type="submit" value="Delete" class="btn btn-danger" />
+        </form>
+        <div>
+            <a asp-page="IndexBoats">Back to List</a>
+        </div>
+    </div>
+</div>
