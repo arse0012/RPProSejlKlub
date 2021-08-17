@@ -23,6 +23,10 @@ namespace ProtoBoatRazorPage.Pages.Boats
         public IActionResult OnGet(int id)
         {
             Boat = _boatCatalog.GetBoat(id);
+            if (Boat == null)
+            {
+                return null;
+            }
             return Page();
         }
         public IActionResult OnPost()

@@ -15,8 +15,11 @@ namespace ProtoBoatRazorPage.Models
         public string Name { get; set; }
 
         public string Description { get; set; }
-        [Required(ErrorMessage = "Dato skal sættes")]
+        [DataType(DataType.Date)]
+        [Range(typeof(DateTime), "16/8-2021", "16/8-2022", 
+            ErrorMessage = "registringen skal være efter {1}")]
         public DateTime DateTime { get; set; }
+        
         public string ImageName { get; set; }
 
     }

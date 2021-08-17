@@ -3,35 +3,35 @@
     "Id": 1,
     "Name": "Arsen",
     "LastName": "Niy",
-    "Mail": "as@hotmail.com",
-    "PhoneNumber": 23546134
+    "Mail": "Arse@Gmail.com",
+    "PhoneNumber": "23546134"
   },
   "2": {
     "Id": 2,
     "Name": "Jim",
     "LastName": "Vster",
     "Mail": "ves@Gmail.dk",
-    "PhoneNumber": 12345678
+    "PhoneNumber": "32445621"
   },
   "3": {
     "Id": 3,
     "Name": "Timmy",
     "LastName": "Reack",
     "Mail": "tim@hotmail.com",
-    "PhoneNumber": 98765432
+    "PhoneNumber": "98765433"
   },
   "4": {
     "Id": 4,
     "Name": "gr",
     "LastName": "few",
-    "Mail": null,
-    "PhoneNumber": 0
+    "Mail": "fww@Gmail.com",
+    "PhoneNumber": "33333434"
   },
   "5": {
     "Id": 5,
     "Name": "Drake",
     "LastName": "Miach",
     "Mail": "dr@homail.com",
-    "PhoneNumber": 80446352
+    "PhoneNumber": "80446352"
   }
 }

@@ -15,11 +15,16 @@ namespace ProtoBoatRazorPage.Models
         
         [Required(ErrorMessage = "Fornavn skal udfyldes")]
         public string Name { get; set; }
-        [Required(ErrorMessage = "Efternaven skal udfyldes")]
+        [Required(ErrorMessage = "Efternavn skal udfyldes")]
         public string LastName { get; set; }
 
+        [DataType(DataType.EmailAddress)]
+        //[Required(ErrorMessage = "angiv mailladresse")]
         public string Mail { get; set; }
+        
+        [DataType(DataType.PhoneNumber)]
         [Required(ErrorMessage = "Angiv telefon nummer")]
-        public int PhoneNumber { get; set; }
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{2})$", ErrorMessage = "Ikke gyldig telefonnummer")]
+        public string PhoneNumber { get; set; }
     }
 }

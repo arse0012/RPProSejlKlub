@@ -23,6 +23,10 @@ namespace ProtoBoatRazorPage.Pages.Users
         public IActionResult OnGet(int id)
         {
             BoatUser = _userCatalog.GetUser(id);
+            if (BoatUser == null)
+            {
+                return null;
+            }
             return Page();
         }
         public IActionResult OnPost()
