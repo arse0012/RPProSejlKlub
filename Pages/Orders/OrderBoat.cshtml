@@ -1,10 +1,10 @@
-﻿@page "{id:int}"
-@model ProtoBoatRazorPage.Pages.Boats.DeleteBoatModel
+﻿@page "{id}"
+@model ProtoBoatRazorPage.Pages.Orders.OrderBoatModel
 @{
-    ViewData["Title"] = "DeleteBoat";
+    ViewData["Title"] = "OrderBoat";
 }
 
-<h1>DeleteBoat</h1>
+<h1>OrderBoat</h1>
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -46,11 +46,20 @@
                     @Html.DisplayFor(model => model.Boat.ImageName)
                 </dd>
             </dl>
-            <input type="submit" value="Delete" class="btn btn-danger"/>
+            <div class="form-group">
+                <label asp-for="@Model.BoatUser.Id" class="control-label"></label>
+                <select asp-for="@Model.BoatUser.Id" class="form-control" 
+                        asp-items="@Model.UserCodes">
+                    <option value="">-- Select Id --</option>
+                </select>
+                <span asp-validation-for="@Model.BoatUser.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Order Boat" class="btn btn-primary"/>
+            </div>
         </form>
-        <div>
-            <a asp-page="IndexBoats">Back to List</a>
-        </div>
     </div>
 </div>
-
+<div>
+    <a asp-page="/Boats/IndexBoats">Back to List</a>
+</div>

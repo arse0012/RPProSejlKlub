@@ -20,5 +20,10 @@ namespace ProtoBoatRazorPage.Helpers
             string jsonString = File.ReadAllText(JsonFileName);
             return JsonConvert.DeserializeObject<Dictionary<int, Boat>>(jsonString);
         }
+        public static Dictionary<int, Order> ReadJsonOrder(string JsonFileName)
+        {
+            string jsonString = File.ReadAllText(JsonFileName);
+            return JsonConvert.DeserializeObject<Dictionary<int, Order>>(jsonString);
+        }
     }
 }
