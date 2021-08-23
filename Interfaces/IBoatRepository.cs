@@ -13,6 +13,7 @@ namespace ProtoBoatRazorPage.Interfaces
         void UpdateBoat(Boat boat);
         void DeleteBoat(Boat boat);
         Dictionary<int, Boat> GetAllBoats();
+        Dictionary<int, Boat> SearchBoatsById(int id);
         Dictionary<int, Boat> FilterBoat(string criteria);
     }
 }

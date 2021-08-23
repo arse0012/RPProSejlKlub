@@ -1,0 +1,42 @@
+﻿@page
+@model ProtoBoatRazorPage.Pages.Boats.BookBoatModel
+@{
+    ViewData["Title"] = "BookBoat";
+}
+
+<h1>BookBoat</h1>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    @if (Model.OrderedBoats.Count != 0)
+    {
+        <tbody>
+            @foreach (var item in Model.OrderedBoats)
+            {
+                <tr>
+                    <td class="text-center">@item.Value.Name</td>
+                    <td class="text-center">@item.Value.Type</td>
+                    <td>
+                        <img src="~/Boats/@item.Value.ImageName" width="60" height="70" />
+                    </td>
+                    <td>
+                        <form method="post">
+                            <button asp-page-handler="Delete" asp-route-id="@item.Value.Id" class="btn btn-danger btn-group-lg pull-right">
+                                Delete-From-Chart
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    }
+</table>
+<div class="text-center">
+    <a asp-page="IndexBoats" class="btn btn-primary">Continue booking</a>
+    <a asp-page="CheckOut" class="btn btn-primary">Check Out</a>
+</div>

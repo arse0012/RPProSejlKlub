@@ -1,0 +1,20 @@
+﻿@page
+@model ProtoBoatRazorPage.Pages.Boats.CheckOutModel
+@{
+    ViewData["Title"] = "CheckOut";
+}
+
+<h1>CheckOut</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Boat.UserId" class="control-label"></label>
+        <select asp-for="@Model.Boat.UserId" class="form-control"
+                asp-items="@Model.UserIds">
+            <option value="">-- Select User --</option>
+        </select>
+        <span asp-validation-for="@Model.Boat.UserId" class="text-danger"></span>
+    </div>
+</form>
+<div>
+    <a asp-page="IndexBooks">Back To List</a>
+</div>

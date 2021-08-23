@@ -11,6 +11,12 @@ namespace ProtoBoatRazorPage.Repository
     public class JsonBoatRepository : IBoatRepository
     {
         string JsonFileName = @"C:\Users\arsen\source\repos\ProtoBoatRazorPage\Data\JsonBoat.json";
+
+        public Dictionary<int, Boat> SearchBoatsById(int id)
+        {
+            Dictionary<int, User> users = new Dictionary<int, User>();
+            return users[id].BoatList;
+        }
         public void AddBoat(Boat boat)
         {
             Dictionary<int, Boat> boats = GetAllBoats();

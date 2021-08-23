@@ -4,34 +4,39 @@
     "Name": "Arsen",
     "LastName": "Niy",
     "Mail": "Arse@Gmail.com",
-    "PhoneNumber": "23546131"
+    "PhoneNumber": "23546131",
+    "BoatList": null
   },
   "2": {
     "Id": 2,
     "Name": "Jim",
     "LastName": "Vster",
     "Mail": "ves@Gmail.dk",
-    "PhoneNumber": "32445623"
+    "PhoneNumber": "32445623",
+    "BoatList": null
   },
   "3": {
     "Id": 3,
     "Name": "Timmy",
     "LastName": "Reack",
     "Mail": "tim@hotmail.com",
-    "PhoneNumber": "98765433"
+    "PhoneNumber": "98765433",
+    "BoatList": null
   },
   "4": {
     "Id": 4,
     "Name": "gr",
     "LastName": "few",
     "Mail": "fww@Gmail.com",
-    "PhoneNumber": "33333434"
+    "PhoneNumber": "33333434",
+    "BoatList": null
   },
   "5": {
     "Id": 5,
     "Name": "Drake",
     "LastName": "Miach",
     "Mail": "dr@homail.com",
-    "PhoneNumber": "80446352"
+    "PhoneNumber": "80446352",
+    "BoatList": null
   }
 }

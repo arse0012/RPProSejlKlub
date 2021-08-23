@@ -1,0 +1,56 @@
+﻿@page "{id:int}"
+@model ProtoBoatRazorPage.Pages.Users.UsersBoatsModel
+@{
+    ViewData["Title"] = "UsersBoats";
+}
+
+<h1>UsersBoats</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            DateTime
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Boats)
+    {
+        <tr>
+            <td>
+                @item.Value.Id
+            </td>
+            <td>
+                @item.Value.Name
+            </td>
+            <td>
+                @item.Value.Type
+            </td>
+            <td>
+                @item.Value.Description
+            </td>
+            <td>
+                @item.Value.DateTime
+            </td>
+            @*<td>
+                <a asp-page="/Events/EditEvent" asp-route-id="@item.Value.Id">Edit</a>|
+            </td>*@
+        </tr>
+    }
+    </tbody>
+</table>
+<div>
+    <a asp-page="IndexUser">Back to List</a>
+</div>

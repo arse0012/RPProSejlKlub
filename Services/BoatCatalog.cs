@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProtoBoatRazorPage.Services
 {
-    public class BoatCatalog:IBoatRepository
+    public class BoatCatalog
     {
         private Dictionary<int, Boat> boats { get; }
         //private static BoatCatalog _instance;

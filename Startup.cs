@@ -31,6 +31,8 @@ namespace ProtoBoatRazorPage
             //services.AddSingleton<IBoatRepository, BoatCatalog>();
             services.AddTransient<IUserRepository, JsonUserRepository>();
             services.AddTransient<IBoatRepository, JsonBoatRepository>();
+
+            services.AddSingleton<BookingBoatService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
