@@ -45,7 +45,9 @@
                 @item.Value.Id
             </td>
             <td>
-                @item.Value.Name
+                <a asp-page="BoatDetail" asp-route-id="@item.Key" class="nav-link text-dark">
+                    @item.Value.Name
+                </a>
             </td>
             <td>
                 @item.Value.Type
@@ -54,12 +56,10 @@
                 @item.Value.Description
             </td>
             <td>
-                <img src="~/Boats/@item.Value.ImageName" width="80" height="70"/>
+                <img src="~/Boats/@item.Value.ImageName" class="rounded" width="80" height="70"/>
             </td>
             <td>
                 <p>
-                    <a asp-page="EditBoat" asp-route-id="@item.Key" class="btn btn-primary">Edit</a>
-                    <a asp-page="DeleteBoat" asp-route-id="@item.Key" class="btn btn-primary">Delete</a>
                     <a asp-page="BookBoat" asp-route-id="@item.Key" class="btn btn-primary">Book</a>
                 </p>
             </td>

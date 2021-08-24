@@ -1,0 +1,23 @@
+﻿@page "{id:int}"
+@model ProtoBoatRazorPage.Pages.Boats.BoatDetailModel
+@{
+    ViewData["Title"] = "BoatDetail";
+}
+
+<h1>BoatDetail</h1>
+<div class="container">
+    <div>
+        <div class="card-header">
+            <p> Id: @Model.Boat.Id</p>
+            <p> Name: @Model.Boat.Name</p>
+            <p> Description: @Model.Boat.Description</p>
+            <img class="card-img-top img-thumbnail" height="200" src="~/Boats/@Model.Boat.ImageName"/>
+        </div>
+        <div class="card-footer text-center">
+            <a asp-page="/Boats/EditBoat" asp-route-id="@Model.Boat.Id" class="btn btn-primary m-1">Edit</a>
+            <a asp-page="DeleteBoat" asp-route-id="@Model.Boat.Id" class="btn btn-primary">Delete</a>
+            <a asp-page="BookBoat" asp-route-id="@Model.Boat.Id" class="btn btn-primary">Book</a>
+        </div>
+    </div>
+</div>
+
