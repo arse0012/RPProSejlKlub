@@ -10,13 +10,8 @@ namespace ProtoBoatRazorPage.Repository
 {
     public class JsonBoatRepository : IBoatRepository
     {
-        string JsonFileName = @"C:\Users\arsen\source\repos\ProtoBoatRazorPage\Data\JsonBoat.json";
+        string JsonFileName = @"Data\JsonBoat.json";
 
-        public Dictionary<int, Boat> SearchBoatsById(int id)
-        {
-            Dictionary<int, User> users = new Dictionary<int, User>();
-            return users[id].BoatList;
-        }
         public void AddBoat(Boat boat)
         {
             Dictionary<int, Boat> boats = GetAllBoats();
@@ -36,24 +31,13 @@ namespace ProtoBoatRazorPage.Repository
                 boat.Id = 1;
             }
             boats.Add(boat.Id, boat);
-            JsonFileWritter.WriteToJsonBoat(boats, JsonFileName);
+            JsonFileWriter.WriteToJsonBoat(boats, JsonFileName);
         }
-
-        //private int GetCount(Dictionary<int, Boat> boats)
-        //{
-        //    int total = 0;
-        //    foreach (var b in boats)
-        //    {
-        //        total += b.Value.BoatList.Count;
-        //    }
-        //    return total;
-        //}
-
         public void DeleteBoat(Boat boat)
         {
             Dictionary<int, Boat> boats = GetAllBoats();
             boats.Remove(boat.Id);
-            JsonFileWritter.WriteToJsonBoat(boats, JsonFileName);
+            JsonFileWriter.WriteToJsonBoat(boats, JsonFileName);
         }
 
         public Dictionary<int, Boat> FilterBoat(string criteria)
@@ -96,7 +80,7 @@ namespace ProtoBoatRazorPage.Repository
             foundBoat.Description = boat.Description;
             foundBoat.DateTime = boat.DateTime;
             foundBoat.ImageName = boat.ImageName;
-            JsonFileWritter.WriteToJsonBoat(boats, JsonFileName);
+            JsonFileWriter.WriteToJsonBoat(boats, JsonFileName);
         }
     }
 }

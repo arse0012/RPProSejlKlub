@@ -5,7 +5,8 @@
     "Name": "Cruise",
     "Description": "Long",
     "DateTime": "2021-08-16T00:00:00",
-    "ImageName": "GkagDqux-boaT.jfif"
+    "ImageName": "GkagDqux-boaT.jfif",
+    "UserId": 0
   },
   "2": {
     "Id": 2,
@@ -13,7 +14,8 @@
     "Name": "MyQueen",
     "Description": "Royal",
     "DateTime": "2021-08-16T00:00:00",
-    "ImageName": "OceanBoat.jfif"
+    "ImageName": "OceanBoat.jfif",
+    "UserId": 0
   },
   "3": {
     "Id": 3,
@@ -21,14 +23,7 @@
     "Name": "Revenge",
     "Description": "Small, but fast",
     "DateTime": "2021-08-16T00:00:00",
-    "ImageName": "Elwood-electric-woodenboat.jfif"
-  },
-  "4": {
-    "Id": 4,
-    "Type": "f2f",
-    "Name": "cakvjw",
-    "Description": "Small, but fast",
-    "DateTime": "2021-08-16T01:05:00",
-    "ImageName": "Boat.jfif"
+    "ImageName": "Elwood-electric-woodenboat.jfif",
+    "UserId": 0
   }
 }

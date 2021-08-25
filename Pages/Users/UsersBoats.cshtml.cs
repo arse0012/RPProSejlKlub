@@ -11,23 +11,22 @@ namespace ProtoBoatRazorPage.Pages.Users
 {
     public class UsersBoatsModel : PageModel
     {
-        private IBoatRepository repo;
-        public Dictionary<int, Boat> Boats { get; private set; }
+        private IOrderRepository repo;
+        public Dictionary<int, Order> Orders { get; private set; }
 
-        public UsersBoatsModel(IBoatRepository repository)
+        public UsersBoatsModel(IOrderRepository repository)
         {
             repo = repository;
         }
-        public IActionResult OnGet(int id)
+        public IActionResult OnGet(User user)
         {
-            Boats = new Dictionary<int, Boat>();
+            Orders = new Dictionary<int, Order>();
             if (ModelState.IsValid)
             {
                 return NotFound();
             }
 
-            Boats = repo.SearchBoatsById(id);
-            if (Boats == null)
+            if (Orders == null)
             {
                 return NotFound();
             }

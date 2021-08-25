@@ -11,7 +11,7 @@ namespace ProtoBoatRazorPage.Repository
 {
     public class JsonUserRepository : IUserRepository
     {
-        string JsonFileName = @"C:\Users\arsen\source\repos\ProtoBoatRazorPage\Data\JsonUser.json";
+        string JsonFileName = @"Data\JsonUser.json";
         public void AddUser(User user)
         {
             Dictionary<int, User> users = GetAllUsers();
@@ -31,14 +31,14 @@ namespace ProtoBoatRazorPage.Repository
                 user.Id = 1;
             }
             users.Add(user.Id, user);
-            JsonFileWritter.WriteToJsonUser(users, JsonFileName);
+            JsonFileWriter.WriteToJsonUser(users, JsonFileName);
         }
 
         public void DeleteUser(User user)
         {
             Dictionary<int, User> users = GetAllUsers();
             users.Remove(user.Id);
-            JsonFileWritter.WriteToJsonUser(users, JsonFileName);
+            JsonFileWriter.WriteToJsonUser(users, JsonFileName);
         }
 
         public Dictionary<int, User> FilterUser(string criteria)
@@ -79,7 +79,7 @@ namespace ProtoBoatRazorPage.Repository
             foundUser.LastName = user.LastName;
             foundUser.Mail = user.Mail;
             foundUser.PhoneNumber = user.PhoneNumber;
-            JsonFileWritter.WriteToJsonUser(users, JsonFileName);
+            JsonFileWriter.WriteToJsonUser(users, JsonFileName);
         }
     }
 }

@@ -7,22 +7,22 @@ using System.Threading.Tasks;
 
 namespace ProtoBoatRazorPage.Helpers
 {
-    public class JsonFileWritter
+    public class JsonFileWriter
     {
-        public static void WriteToJsonUser(Dictionary<int, User> users, string JsonFileName)
+        public static void WriteToJsonUser(Dictionary<int, User> users, string jsonFileName)
         {
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(users, Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText(JsonFileName, output);
+            File.WriteAllText(jsonFileName, output);
         }
-        public static void WriteToJsonBoat(Dictionary<int, Boat> boats, string JsonFileName)
+        public static void WriteToJsonBoat(Dictionary<int, Boat> boats, string jsonFileName)
         {
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(boats, Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText(JsonFileName, output);
+            File.WriteAllText(jsonFileName, output);
         }
-        public static void WriteToJsonOrder(Dictionary<int, Order> orders, string JsonFileName)
+        public static void WriteToJsonOrder(Dictionary<int, Order> orders, string jsonFileName)
         {
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(orders, Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText(JsonFileName, output);
+            File.WriteAllText(jsonFileName, output);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace ProtoBoatRazorPage.Pages
 
         public void OnGet()
         {
-            ViewData["Message"] = "Velkommen til Sejlkluppen";
+            ViewData["Message"] = "Velkommen til Sejlklubben";
         }
     }
 }

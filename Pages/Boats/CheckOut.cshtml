@@ -7,12 +7,12 @@
 <h1>CheckOut</h1>
 <form method="post">
     <div class="form-group">
-        <label asp-for="@Model.Boat.UserId" class="control-label"></label>
-        <select asp-for="@Model.Boat.UserId" class="form-control"
-                asp-items="@Model.UserIds">
+        <label asp-for="@Model.User.Id" class="control-label"></label>
+        <select asp-for="@Model.SelectedId" class="form-control"
+                asp-items="@Model.UserCodes">
             <option value="">-- Select User --</option>
         </select>
-        <span asp-validation-for="@Model.Boat.UserId" class="text-danger"></span>
+        <span asp-validation-for="@Model.User.Id" class="text-danger"></span>
     </div>
     <div class="form-group">
         <input class="btn btn-primary" type="submit" value="Complete Booking"/>

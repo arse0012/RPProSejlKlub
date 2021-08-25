@@ -10,26 +10,26 @@ namespace ProtoBoatRazorPage.Repository
 {
     public class JsonOrderRepository: IOrderRepository
     {
-        string JsonFileName = @"C:\Users\arsen\source\repos\ProtoBoatRazorPage\Data\JsonOrder.json";
+        string JsonFileName = @"Data\JsonOrder.json";
         public void AddOrder(Order order)
         {
             Dictionary<int, Order> orders = AllOrders();
             List<int> orderIds = new List<int>();
             foreach (var ord in orders)
             {
-                orderIds.Add(ord.Value.OrderId);
+                orderIds.Add(ord.Value.Code);
             }
             if (orderIds.Count != 0)
             {
                 int start = orderIds.Max();
-                order.OrderId = start + 1;
+                order.Code = start + 1;
             }
             else
             {
-                order.OrderId = 0;
+                order.Code = 0;
             }
-            orders.Add(order.OrderId, order);
-            JsonFileWritter.WriteToJsonOrder(orders, JsonFileName);
+            orders.Add(order.Code, order);
+            JsonFileWriter.WriteToJsonOrder(orders, JsonFileName);
         }
 
         public Dictionary<int, Order> AllOrders()
