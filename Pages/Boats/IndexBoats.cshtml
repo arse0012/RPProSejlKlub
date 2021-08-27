@@ -53,7 +53,9 @@
                 @item.Value.Type
             </td>
             <td>
-                @item.Value.Description
+                <div id="demo" class="collapse">
+                    @item.Value.Description
+                </div>
             </td>
             <td>
                 <img src="~/Boats/@item.Value.ImageName" class="rounded" width="80" height="70"/>
@@ -61,6 +63,7 @@
             <td>
                 <p>
                     <a asp-page="/Bookings/BookBoat" asp-route-id="@item.Key" class="btn btn-primary">Book</a>
+                    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Show Details</button>
                 </p>
             </td>
         </tr>
