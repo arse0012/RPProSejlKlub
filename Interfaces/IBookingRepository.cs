@@ -6,10 +6,10 @@ using ProtoBoatRazorPage.Models;
 
 namespace ProtoBoatRazorPage.Interfaces
 {
-    public interface IOrderRepository
+    public interface IBookingRepository
     {
-        void AddOrder(Order order);
-        Dictionary<int, Order> AllOrders();
-
+        void BookBoat(Booking booking);
+        Dictionary<int, Booking> GetAllBookings();
+        Dictionary<int, Booking> SearchBoatByCode(int id);
     }
 }

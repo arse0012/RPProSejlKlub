@@ -22,12 +22,12 @@ namespace ProtoBoatRazorPage.Services
                 _bookItems.Add(boat.Id, boat);
         }
 
-        public Dictionary<int, Boat> GetOrderedBoat()
+        public Dictionary<int, Boat> GetBookedBoat()
         {
             return _bookItems;
         }
 
-        public void RemoveOrder(int orderId)
+        public void RemoveBooking(int orderId)
         {
             foreach (var boat in _bookItems)
             {

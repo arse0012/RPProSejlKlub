@@ -8,13 +8,13 @@ using ProtoBoatRazorPage.Interfaces;
 using ProtoBoatRazorPage.Models;
 using ProtoBoatRazorPage.Services;
 
-namespace ProtoBoatRazorPage.Pages.Boats
+namespace ProtoBoatRazorPage.Pages.Bookings
 {
     public class BookBoatModel : PageModel
     {
         private readonly IBoatRepository repo;
         public BookingBoatService service { get; }
-        public Dictionary<int, Boat> OrderedBoats { get; set; }
+        public Dictionary<int, Boat> BookedBoats { get; set; }
         public Boat Boat { get; set; }
 
         //public Order Order { get; set; }
@@ -23,7 +23,7 @@ namespace ProtoBoatRazorPage.Pages.Boats
         {
             repo = repository;
             service = boatOrder;
-            OrderedBoats = new Dictionary<int, Boat>();
+            BookedBoats = new Dictionary<int, Boat>();
 
             //Dictionary<int, User> users = urepo.GetAllUsers();
 
@@ -33,13 +33,13 @@ namespace ProtoBoatRazorPage.Pages.Boats
         {
             Boat boat = repo.GetBoat(id);
             service.Add(boat);
-            OrderedBoats = service.GetOrderedBoat();
+            BookedBoats = service.GetBookedBoat();
             return Page();
         }
         public IActionResult OnPostDelete(int id)
         {
-            service.RemoveOrder(id);
-            OrderedBoats = service.GetOrderedBoat();
+            service.RemoveBooking(id);
+            BookedBoats = service.GetBookedBoat();
             return Page();
         }
     }

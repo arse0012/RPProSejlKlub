@@ -19,7 +19,7 @@ namespace ProtoBoatRazorPage.Helpers
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(boats, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(jsonFileName, output);
         }
-        public static void WriteToJsonOrder(Dictionary<int, Order> orders, string jsonFileName)
+        public static void WriteToJsonBooking(Dictionary<int, Booking> orders, string jsonFileName)
         {
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(orders, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(jsonFileName, output);

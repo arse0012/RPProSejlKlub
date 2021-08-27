@@ -10,23 +10,23 @@ using ProtoBoatRazorPage.Models;
 using ProtoBoatRazorPage.Repository;
 using ProtoBoatRazorPage.Services;
 
-namespace ProtoBoatRazorPage.Pages.Boats
+namespace ProtoBoatRazorPage.Pages.Bookings
 {
     public class CheckOutModel : PageModel
     {
-        private JsonOrderRepository repo;
+        private IBookingRepository repo;
         private BookingBoatService cart;
         [BindProperty]
         public int SelectedId { get; set; }
         public User User { get; set; }
         public Boat Boat { get; set; }
         [BindProperty]
-        public Order Order { get; set; }
+        public Booking Order { get; set; }
         public SelectList UserCodes { get; set; }
 
         private IUserRepository Urepo { get; set; }
 
-        public CheckOutModel(JsonOrderRepository repository, IUserRepository urepo, BookingBoatService brepo)
+        public CheckOutModel(IBookingRepository repository, IUserRepository urepo, BookingBoatService brepo)
         {
             repo = repository;
             cart = brepo;
@@ -46,14 +46,14 @@ namespace ProtoBoatRazorPage.Pages.Boats
             {
                 return Page();
             }
-            Order order = new Order();
-            order.Code = 12;
+            Booking booking = new Booking();
+            booking.Code = 12;
             User =Urepo.GetUser(SelectedId);
-            order.User = User;
-            order.Boats = cart.GetOrderedBoat();
-            order.DateTime=DateTime.Now;
-            repo.AddOrder(order);
-            return RedirectToPage("IndexBoats");
+            booking.User = User;
+            booking.Boats = cart.GetBookedBoat();
+            booking.DateTime=DateTime.Now;
+            repo.BookBoat(booking);
+            return RedirectToPage("/Boats/IndexBoats");
         }
         
     }

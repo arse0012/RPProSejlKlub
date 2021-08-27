@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ProtoBoatRazorPage.Models
 {
-    public class Order
+    public class Booking
     {
         public int Code { get; set; }
         public User User { get; set; }

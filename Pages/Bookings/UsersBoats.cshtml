@@ -1,0 +1,43 @@
+﻿@page "{Id:int}"
+@model ProtoBoatRazorPage.Pages.Bookings.UsersBoatsModel
+@{
+    ViewData["Title"] = "UsersBoats";
+}
+
+<h1>UsersBoats</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Navn</th>
+            <th>Type</th>
+            <th>Beskrivelse</th>
+            <th>Dato</th>
+            <th>Billede</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Bookings)
+    {
+        @foreach (var bt in item.Value.Boats)
+        {
+        <tr>
+            <td>@bt.Value.Id</td>
+            <td>@bt.Value.Name</td>
+            <td>@bt.Value.Type</td>
+            <td>@bt.Value.Description</td>
+            <td>@bt.Value.DateTime</td>
+            <td>
+                <img src="~/Boats/@bt.Value.ImageName" class="rounded" width="80" height="70" />
+            </td>
+            <td>
+                <a asp-page="/Boats/EditBoat" asp-route-Id="@bt.Value.Id">Edit</a>|
+            </td>
+        </tr>
+        }
+    }
+    </tbody>
+</table>
+<div>
+    <a asp-page="/Users/IndexUser">Back to List</a>
+</div>
