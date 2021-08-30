@@ -5,17 +5,15 @@
     "Name": "Cruise",
     "Description": "Long",
     "DateTime": "2021-08-16T00:00:00",
-    "ImageName": "GkagDqux-boaT.jfif",
-    "UserId": 0
+    "ImageName": "GkagDqux-boaT.jfif"
   },
   "2": {
     "Id": 2,
-    "Type": "Ship",
+    "Type": "Cruise",
     "Name": "MyQueen",
-    "Description": "Royal",
+    "Description": "Hvis du søger saltvands fiskning og drømmer om at fange et stort tropy.",
     "DateTime": "2021-08-16T00:00:00",
-    "ImageName": "OceanBoat.jfif",
-    "UserId": 0
+    "ImageName": "OceanBoat.jfif"
   },
   "3": {
     "Id": 3,
@@ -23,7 +21,14 @@
     "Name": "Revenge",
     "Description": "Small, but fast",
     "DateTime": "2021-08-16T00:00:00",
-    "ImageName": "Elwood-electric-woodenboat.jfif",
-    "UserId": 0
+    "ImageName": "Elwood-electric-woodenboat.jfif"
+  },
+  "4": {
+    "Id": 4,
+    "Type": "Båd",
+    "Name": "Simple",
+    "Description": null,
+    "DateTime": "2021-08-30T00:00:00",
+    "ImageName": "Boat.jfif"
   }
 }

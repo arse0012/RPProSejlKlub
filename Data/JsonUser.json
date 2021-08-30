@@ -1,42 +1,50 @@
 {
   "1": {
     "Id": 1,
-    "OrderCode": 0,
     "Name": "Arsen",
     "LastName": "Niy",
     "Mail": "Arse@Gmail.com",
-    "PhoneNumber": "23546131"
+    "PhoneNumber": "23546132",
+    "RegDate": "0001-01-01T00:00:00"
   },
   "2": {
     "Id": 2,
-    "OrderCode": 0,
     "Name": "Jim",
     "LastName": "Vster",
     "Mail": "ves@Gmail.dk",
-    "PhoneNumber": "32445623"
+    "PhoneNumber": "32445623",
+    "RegDate": "0001-01-01T00:00:00"
   },
   "3": {
     "Id": 3,
-    "OrderCode": 0,
     "Name": "Timmy",
     "LastName": "Reack",
-    "Mail": "tim@hotmail.com",
-    "PhoneNumber": "98765433"
+    "Mail": "Tim@hotmail.com",
+    "PhoneNumber": "98765433",
+    "RegDate": "0001-01-01T00:00:00"
   },
   "4": {
     "Id": 4,
-    "OrderCode": 0,
     "Name": "gr",
     "LastName": "few",
     "Mail": "fww@Gmail.com",
-    "PhoneNumber": "33333434"
+    "PhoneNumber": "33333434",
+    "RegDate": "0001-01-01T00:00:00"
   },
   "5": {
     "Id": 5,
-    "OrderCode": 0,
     "Name": "Drake",
     "LastName": "Miach",
     "Mail": "dr@homail.com",
-    "PhoneNumber": "80446352"
+    "PhoneNumber": "80446352",
+    "RegDate": "0001-01-01T00:00:00"
+  },
+  "6": {
+    "Id": 6,
+    "Name": "Bill",
+    "LastName": "Heckler",
+    "Mail": "Heck@mail.com",
+    "PhoneNumber": "34256211",
+    "RegDate": "2021-08-30T13:31:08.8991594+02:00"
   }
 }

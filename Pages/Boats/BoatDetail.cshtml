@@ -8,10 +8,11 @@
 <div class="container">
     <div>
         <div class="card-header">
+            <img class="img-fluid" src="~/Boats/@Model.Boat.ImageName" />
             <p> Id: @Model.Boat.Id</p>
             <p> Name: @Model.Boat.Name</p>
+            <p> Type: @Model.Boat.Type</p>
             <p> Description: @Model.Boat.Description</p>
-            <img class="card-img-top img-thumbnail" height="200" src="~/Boats/@Model.Boat.ImageName"/>
         </div>
         <div class="card-footer text-center">
             <a asp-page="EditBoat" asp-route-id="@Model.Boat.Id" class="btn btn-primary m-1">Edit</a>

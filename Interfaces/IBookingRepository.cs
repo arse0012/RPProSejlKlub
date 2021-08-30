@@ -11,5 +11,6 @@ namespace ProtoBoatRazorPage.Interfaces
         void BookBoat(Booking booking);
         Dictionary<int, Booking> GetAllBookings();
         Dictionary<int, Booking> SearchBoatByCode(int id);
+        void RemoveBookedBoat(Booking bookBoat);
     }
 }

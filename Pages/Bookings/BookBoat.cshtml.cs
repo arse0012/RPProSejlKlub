@@ -17,17 +17,11 @@ namespace ProtoBoatRazorPage.Pages.Bookings
         public Dictionary<int, Boat> BookedBoats { get; set; }
         public Boat Boat { get; set; }
 
-        //public Order Order { get; set; }
-        //public SelectList UserCodes { get; set; }
         public BookBoatModel(IBoatRepository repository, BookingBoatService boatOrder)
         {
             repo = repository;
             service = boatOrder;
             BookedBoats = new Dictionary<int, Boat>();
-
-            //Dictionary<int, User> users = urepo.GetAllUsers();
-
-            //UserCodes = new SelectList(users.Values, "Id","Name");
         }
         public IActionResult OnGet(int id)
         {

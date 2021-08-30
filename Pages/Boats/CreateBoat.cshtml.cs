@@ -12,7 +12,6 @@ namespace ProtoBoatRazorPage.Pages.Boats
 {
     public class CreateBoatModel : PageModel
     {
-        //private BoatCatalog catalog;
         private readonly IBoatRepository _boatCatalog;
         [BindProperty]
         public Boat Boat { get; set; }

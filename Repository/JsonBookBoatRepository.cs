@@ -53,10 +53,11 @@ namespace ProtoBoatRazorPage.Repository
             return user;
         }
 
-        //private Dictionary<int, Booking> GetAllBookings()
-        //{
-        //    Dictionary<int, Booking> returnList = JsonFileReader.ReadJsonBooking(JsonFileName);
-        //    return returnList;
-        //}
+        public void RemoveBookedBoat(Booking bookedBoat)
+        {
+            Dictionary<int, Booking> bookings = GetAllBookings();
+            bookings.Remove(bookedBoat.Code);
+            JsonFileWriter.WriteToJsonBooking(bookings, JsonFileName);
+        }
     }
 }

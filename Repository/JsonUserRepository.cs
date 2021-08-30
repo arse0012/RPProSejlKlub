@@ -30,6 +30,7 @@ namespace ProtoBoatRazorPage.Repository
             {
                 user.Id = 1;
             }
+            user.RegDate=DateTime.Now;
             users.Add(user.Id, user);
             JsonFileWriter.WriteToJsonUser(users, JsonFileName);
         }

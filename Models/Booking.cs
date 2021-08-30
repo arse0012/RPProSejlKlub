@@ -11,5 +11,6 @@ namespace ProtoBoatRazorPage.Models
         public User User { get; set; }
         public Dictionary<int, Boat> Boats { get; set; }
         public DateTime DateTime { get; set; }
+        public DateTime BookingDate { get; set; }
     }
 }

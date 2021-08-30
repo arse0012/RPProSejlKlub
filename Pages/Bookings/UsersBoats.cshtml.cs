@@ -8,26 +8,25 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using ProtoBoatRazorPage.Interfaces;
 using ProtoBoatRazorPage.Models;
 using ProtoBoatRazorPage.Repository;
+using ProtoBoatRazorPage.Services;
 
 namespace ProtoBoatRazorPage.Pages.Bookings
 {
     public class UsersBoatsModel : PageModel
     {
         private IBookingRepository repo;
+        private BookingBoatService service { get; }
         public Dictionary<int, Booking> Bookings { get; private set; }
-        public Boat usersBoat { get; set; }
         public SelectList UserList { get; set; }
 
-        public UsersBoatsModel(IBookingRepository repository, IBookingRepository brepo)
+        public UsersBoatsModel(IBookingRepository repository)
         {
             repo = repository;
-            Dictionary<int, Booking> bookings = brepo.GetAllBookings();
+            Dictionary<int, Booking> bookings = repo.GetAllBookings();
             UserList = new SelectList(bookings.Values, "Id");
         }
         public IActionResult OnGet(int id)
         {
-            //Bookings = repo.GetAllBookings();
-            //return Page();
             Bookings = new Dictionary<int, Booking>();
             if (!ModelState.IsValid)
             {
@@ -38,6 +37,12 @@ namespace ProtoBoatRazorPage.Pages.Bookings
             {
                 return NotFound();
             }
+            return Page();
+        }
+
+        public IActionResult OnPost(Booking bookedBoat)
+        {
+            repo.RemoveBookedBoat(bookedBoat);
             return Page();
         }
     }

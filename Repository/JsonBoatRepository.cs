@@ -30,6 +30,7 @@ namespace ProtoBoatRazorPage.Repository
             {
                 boat.Id = 1;
             }
+            boat.DateTime=DateTime.Now;
             boats.Add(boat.Id, boat);
             JsonFileWriter.WriteToJsonBoat(boats, JsonFileName);
         }
@@ -78,7 +79,6 @@ namespace ProtoBoatRazorPage.Repository
             foundBoat.Name = boat.Name;
             foundBoat.Type = boat.Type;
             foundBoat.Description = boat.Description;
-            foundBoat.DateTime = boat.DateTime;
             foundBoat.ImageName = boat.ImageName;
             JsonFileWriter.WriteToJsonBoat(boats, JsonFileName);
         }
