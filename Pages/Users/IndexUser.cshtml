@@ -1,5 +1,7 @@
 ﻿@page
 @model ProtoBoatRazorPage.Pages.Users.IndexUserModel
+@using ProtoBoatRazorPage.Interfaces
+@inject IBookingRepository _repository
 @{
     ViewData["Title"] = "IndexUser";
 }
@@ -8,10 +10,14 @@
 <p>
     <a asp-page="Registere" class="btn btn-primary">Registere</a>
 </p>
-
+<div>
+    <ul>
+        <li>There are @_repository.GetAllBookings().Count bookings </li>
+    </ul>
+</div>
 <form>
     <p>
-        Search: <input type="text" asp-for="FilterCriteria"/>
+        Search: <input type="text" asp-for="FilterCriteria" />
         <input type="submit" value="Filter" />
     </p>
 </form>
@@ -35,37 +41,43 @@
                 telefon
             </th>
             <th>
+                Bookings
+            </th>
+            <th>
                 Options
             </th>
         </tr>
     </thead>
     <tbody>
-        @foreach(var item in Model.Users)
+        @foreach (var item in Model.Users)
         {
-        <tr>
-            <td>
-                @item.Value.Id
-            </td>
-            <td>
-                @item.Value.Name
-            </td>
-            <td>
-                @item.Value.LastName
-            </td>
-            <td>
-                @item.Value.Mail
-            </td>
-            <td>
-                @item.Value.PhoneNumber
-            </td>
-            <td>
-                <p>
-                    <a asp-page="EditUser" asp-route-id="@item.Value.Id" class="btn btn-primary">Edit</a>
-                    <a asp-page="DeleteUser" asp-route-id="@item.Key" class="btn btn-primary">Delete</a>
-                    <a asp-page="/Bookings/UsersBoats" asp-route-id="@item.Value.Id" class="btn btn-primary">MyBoats</a>
-                </p>
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @item.Value.Id
+                </td>
+                <td>
+                    @item.Value.Name
+                </td>
+                <td>
+                    @item.Value.LastName
+                </td>
+                <td>
+                    @item.Value.Mail
+                </td>
+                <td>
+                    @item.Value.PhoneNumber
+                </td>
+                <td>
+                    @Model.Bookings.Count
+                </td>
+                <td>
+                    <p>
+                        <a asp-page="EditUser" asp-route-id="@item.Value.Id" class="btn btn-primary">Edit</a>
+                        <a asp-page="DeleteUser" asp-route-id="@item.Key" class="btn btn-primary">Delete</a>
+                        <a asp-page="/Bookings/UsersBoats" asp-route-id="@item.Value.Id" class="btn btn-primary">MyBoats</a>
+                    </p>
+                </td>
+            </tr>
         }
     </tbody>
 </table>

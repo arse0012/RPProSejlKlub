@@ -16,18 +16,18 @@ namespace ProtoBoatRazorPage.Pages.Bookings
     {
         private IBookingRepository repo;
         private BookingBoatService service { get; }
-        public Dictionary<int, Booking> Bookings { get; private set; }
+        public List<Booking> Bookings { get; private set; }
         public SelectList UserList { get; set; }
 
         public UsersBoatsModel(IBookingRepository repository)
         {
             repo = repository;
-            Dictionary<int, Booking> bookings = repo.GetAllBookings();
-            UserList = new SelectList(bookings.Values, "Id");
+            //Dictionary<int, Booking> bookings = repo.GetAllBookings();
+            //UserList = new SelectList(bookings.Values, "Id");
         }
         public IActionResult OnGet(int id)
         {
-            Bookings = new Dictionary<int, Booking>();
+            Bookings = new List<Booking>();
             if (!ModelState.IsValid)
             {
                 return NotFound();

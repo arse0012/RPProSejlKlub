@@ -39,20 +39,34 @@ namespace ProtoBoatRazorPage.Repository
             return JsonFileReader.ReadJsonBooking(JsonFileName);
         }
 
-        public Dictionary<int, Booking> SearchBoatByCode(int id)
+        public List<Booking> SearchBoatByCode(int id)
         {
             Dictionary<int, Booking> bookings = GetAllBookings();
-            Dictionary<int, Booking> user = new Dictionary<int, Booking>();
+            List<Booking> user = new List<Booking>(); // Lave om til en List
             foreach (var b in bookings.Values)
             {
                 if (b.User.Id == id)
                 {
-                    user.Add(id, b);
+                    user.Add(b);
                 }
             }
+
             return user;
         }
 
+        public int GetCount(int id)
+        {
+            Dictionary<int, Booking> bookings = GetAllBookings();
+            int total = 0;
+            foreach (var b in bookings.Values)
+            {
+                if(b.User.Id == id)
+                {
+                    
+                }
+            }
+            return total;
+        }
         public void RemoveBookedBoat(Booking bookedBoat)
         {
             Dictionary<int, Booking> bookings = GetAllBookings();
