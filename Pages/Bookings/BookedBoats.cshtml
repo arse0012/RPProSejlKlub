@@ -1,9 +1,15 @@
 ﻿@page
 @model ProtoBoatRazorPage.Pages.Bookings.BookedBoatsModel
+@using ProtoBoatRazorPage.Interfaces
+@inject IBookingRepository _repository
 @{
     ViewData["Title"] = "BookedBoats";
 }
-
+    <div>
+        <ul>
+            <li>There are @_repository.GetAllBookings().Count bookings </li>
+        </ul>
+    </div>
 <h1>BookedeBåde</h1>
 <table class="table">
     <thead>

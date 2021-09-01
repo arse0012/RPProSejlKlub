@@ -12,7 +12,7 @@
 </p>
 <div>
     <ul>
-        <li>There are @_repository.GetAllBookings().Count bookings </li>
+        <li>Der er @Model.Users.Count bådklubsmedlemmer </li>
     </ul>
 </div>
 <form>
@@ -38,10 +38,13 @@
                 Mail
             </th>
             <th>
-                telefon
+                Telefon nr
             </th>
             <th>
-                Bookings
+                Booket både
+            </th>
+            <th>
+                Antal bookings
             </th>
             <th>
                 Options
@@ -51,33 +54,36 @@
     <tbody>
         @foreach (var item in Model.Users)
         {
-            <tr>
-                <td>
-                    @item.Value.Id
-                </td>
-                <td>
-                    @item.Value.Name
-                </td>
-                <td>
-                    @item.Value.LastName
-                </td>
-                <td>
-                    @item.Value.Mail
-                </td>
-                <td>
-                    @item.Value.PhoneNumber
-                </td>
-                <td>
-                    @Model.Bookings.Count
-                </td>
-                <td>
-                    <p>
-                        <a asp-page="EditUser" asp-route-id="@item.Value.Id" class="btn btn-primary">Edit</a>
-                        <a asp-page="DeleteUser" asp-route-id="@item.Key" class="btn btn-primary">Delete</a>
-                        <a asp-page="/Bookings/UsersBoats" asp-route-id="@item.Value.Id" class="btn btn-primary">MyBoats</a>
-                    </p>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @item.Value.Id
+            </td>
+            <td>
+                @item.Value.Name
+            </td>
+            <td>
+                @item.Value.LastName
+            </td>
+            <td>
+                @item.Value.Mail
+            </td>
+            <td>
+                @item.Value.PhoneNumber
+            </td>
+            <td>
+                @_repository.GetCount(item.Value.Id)
+            </td>
+            <td>
+                @_repository.SearchBoatByCode(item.Value.Id).Count
+            </td>
+            <td>
+                <p>
+                    <a asp-page="EditUser" asp-route-id="@item.Value.Id" class="btn btn-primary">Edit</a>
+                    <a asp-page="DeleteUser" asp-route-id="@item.Key" class="btn btn-primary">Delete</a>
+                    <a asp-page="/Bookings/UsersBoats" asp-route-id="@item.Value.Id" class="btn btn-primary">MyBoats</a>
+                </p>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

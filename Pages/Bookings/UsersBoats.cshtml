@@ -1,5 +1,8 @@
 ﻿@page "{Id:int}"
 @model ProtoBoatRazorPage.Pages.Bookings.UsersBoatsModel
+@using ProtoBoatRazorPage.Interfaces
+@using ProtoBoatRazorPage.Models
+@inject IBookingRepository repo
 @{
     ViewData["Title"] = "UsersBoats";
 }
@@ -7,52 +10,53 @@
 <h1>UsersBoats</h1>
 <div>
     <ul>
-        <li>There are @Model.Bookings.Count bookings</li>
+        <li>Du har lavet @Model.Bookings.Count bookings</li>
+        @*<li>Du har booket @foreach(var b in Model.Bookings){@repo.GetCount(b.User.Id)} både</li>*@
     </ul>
 </div>
 <table class="table">
     <thead>
-    <tr>
-        <th>BookingCode</th>
-        <th>Navn</th>
-        <th>Type</th>
-        <th>Bestillingsdato</th>
-        <th>Billede</th>
-        <th>Options</th>
-    </tr>
+        <tr>
+            <th>BookingCode</th>
+            <th>Navn</th>
+            <th>Type</th>
+            <th>Bestillingsdato</th>
+            <th>Billede</th>
+            <th>Options</th>
+        </tr>
     </thead>
     <tbody>
         @foreach (var item in Model.Bookings)
         {
             @foreach (var bt in item.Boats)
-            {
-                <tr>
-                    <td>@item.Code</td>
-                    <td>@bt.Value.Name</td>
-                    <td>@bt.Value.Type</td>
-                    <td>@item.DateTime</td>
-                    <td>
-                        <img src="~/Boats/@bt.Value.ImageName" class="rounded" width="80" height="70"/>
-                    </td>
-                    <td>
-                        <a asp-page="/Boats/EditBoat" asp-route-Id="@bt.Value.Id" class="btn btn-primary">Edit</a>
-                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Show Details</button>
-                        <form method="post">
-                            <button asp-page-handler="Delete" asp-route-id="@item.Code" class="btn btn-danger btn-group-lg pull-right">
-                                Delete-From-Chart
-                            </button>
-                        </form>
-                    </td>
-                    <td>
-                        <div id="demo" class="collapse">
-                            @bt.Value.Description
-                        </div>
-                    </td>
-                </tr>
-            }
+        {
+            <tr>
+                <td>@item.Code</td>
+                <td>@bt.Value.Name</td>
+                <td>@bt.Value.Type</td>
+                <td>@item.DateTime</td>
+                <td>
+                    <img src="~/Boats/@bt.Value.ImageName" class="rounded" width="80" height="70" />
+                </td>
+                <td>
+                    <a asp-page="/Boats/EditBoat" asp-route-Id="@bt.Value.Id" class="btn btn-primary">Edit</a>
+                    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Show Details</button>
+                    <form method="post">
+                        <button asp-page-handler="Delete" asp-route-id="@item.Code" class="btn btn-danger btn-group-lg pull-right">
+                            Delete-From-Chart
+                        </button>
+                    </form>
+                </td>
+                <td>
+                    <div id="demo" class="collapse">
+                        @bt.Value.Description
+                    </div>
+                </td>
+            </tr>
         }
-    </tbody>
-</table>
+    }
+        </tbody>
+    </table>
 <div>
     <a asp-page="/Users/IndexUser">Back to List</a>
 </div>

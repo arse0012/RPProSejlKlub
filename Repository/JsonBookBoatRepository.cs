@@ -42,30 +42,30 @@ namespace ProtoBoatRazorPage.Repository
         public List<Booking> SearchBoatByCode(int id)
         {
             Dictionary<int, Booking> bookings = GetAllBookings();
-            List<Booking> user = new List<Booking>(); // Lave om til en List
+            List<Booking> filteredList = new List<Booking>(); // Lave om til en List
             foreach (var b in bookings.Values)
             {
                 if (b.User.Id == id)
                 {
-                    user.Add(b);
+                    filteredList.Add(b);
                 }
             }
 
-            return user;
+            return filteredList;
         }
 
         public int GetCount(int id)
         {
             Dictionary<int, Booking> bookings = GetAllBookings();
-            int total = 0;
+            int filteredBoat = 0;
             foreach (var b in bookings.Values)
             {
-                if(b.User.Id == id)
-                {
-                    
+                if (b.User.Id == id)
+                { 
+                    filteredBoat += b.Boats.Count;
                 }
             }
-            return total;
+            return filteredBoat;
         }
         public void RemoveBookedBoat(Booking bookedBoat)
         {

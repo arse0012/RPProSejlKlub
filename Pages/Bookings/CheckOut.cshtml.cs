@@ -18,7 +18,7 @@ namespace ProtoBoatRazorPage.Pages.Bookings
         private BookingBoatService cart;
         [BindProperty]
         public int SelectedId { get; set; }
-        public User User { get; set; }
+        public User BookedUser { get; set; }
         public Boat Boat { get; set; }
         [BindProperty]
         public Booking Order { get; set; }
@@ -47,9 +47,9 @@ namespace ProtoBoatRazorPage.Pages.Bookings
                 return Page();
             }
             Booking booking = new Booking();
-            booking.Code = 12;
-            User =Urepo.GetUser(SelectedId);
-            booking.User = User;
+            booking.Code = Int32.MaxValue;
+            BookedUser =Urepo.GetUser(SelectedId);
+            booking.User = BookedUser;
             booking.Boats = cart.GetBookedBoat();
             booking.DateTime=DateTime.Now;
             repo.BookBoat(booking);

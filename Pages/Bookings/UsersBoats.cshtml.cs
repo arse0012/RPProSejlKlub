@@ -15,15 +15,10 @@ namespace ProtoBoatRazorPage.Pages.Bookings
     public class UsersBoatsModel : PageModel
     {
         private IBookingRepository repo;
-        private BookingBoatService service { get; }
         public List<Booking> Bookings { get; private set; }
-        public SelectList UserList { get; set; }
-
         public UsersBoatsModel(IBookingRepository repository)
         {
             repo = repository;
-            //Dictionary<int, Booking> bookings = repo.GetAllBookings();
-            //UserList = new SelectList(bookings.Values, "Id");
         }
         public IActionResult OnGet(int id)
         {
