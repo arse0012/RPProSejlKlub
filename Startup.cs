@@ -50,7 +50,7 @@ namespace ProtoBoatRazorPage
                 app.UseHsts();
             }
 
-            //app.UseStatusCodePages();
+            app.UseStatusCodePages("text/html", "<h1>Error! Status Code {0}</h1>");
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
