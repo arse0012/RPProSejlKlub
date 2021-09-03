@@ -18,20 +18,27 @@
         <tbody>
             @foreach (var item in Model.BookedBoats)
             {
-                <tr>
-                    <td class="text-center">@item.Value.Name</td>
-                    <td class="text-center">@item.Value.Type</td>
-                    <td>
-                        <img src="~/Boats/@item.Value.ImageName" width="60" height="70" />
-                    </td>
-                    <td>
-                        <form method="post">
-                            <button asp-page-handler="Delete" asp-route-id="@item.Value.Id" class="btn btn-danger btn-group-lg pull-right">
-                                Delete-From-Chart
-                            </button>
-                        </form>
-                    </td>
-                </tr>
+            <tr>
+                <td class="text-center">@item.Value.Name</td>
+                <td class="text-center">@item.Value.Type</td>
+                <td>
+                    <img src="~/Boats/@item.Value.ImageName" width="60" height="70" />
+                </td>
+                <td>
+                    <form method="post">
+                        <input asp-for="@Model.Boat.BookedFrom"/>
+                        <input asp-for="@Model.Boat.BookedTo"/>
+                        <button asp-page-handler="Save" asp-route-id="@item.Value.Id" class="btn btn-primary">Sæt dato</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="post">
+                        <button asp-page-handler="Delete" asp-route-id="@item.Value.Id" class="btn btn-danger btn-group-lg pull-right">
+                            Delete-From-Chart
+                        </button>
+                    </form>
+                </td>
+            </tr>
             }
         </tbody>
     }

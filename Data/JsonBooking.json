@@ -16,7 +16,9 @@
         "Name": "Cruise",
         "Description": "Long",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "GkagDqux-boaT.jfif"
+        "ImageName": "GkagDqux-boaT.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       },
       "2": {
         "Id": 2,
@@ -24,11 +26,12 @@
         "Name": "MyQueen",
         "Description": "Royal",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "OceanBoat.jfif"
+        "ImageName": "OceanBoat.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       }
     },
-    "DateTime": "2021-08-25T14:15:57.662466+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
+    "DateTime": "2021-08-25T14:15:57.662466+02:00"
   },
   "2": {
     "Code": 2,
@@ -47,11 +50,12 @@
         "Name": "MyQueen",
         "Description": "Royal",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "OceanBoat.jfif"
+        "ImageName": "OceanBoat.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       }
     },
-    "DateTime": "2021-08-25T14:49:12.5624315+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
+    "DateTime": "2021-08-25T14:49:12.5624315+02:00"
   },
   "3": {
     "Code": 3,
@@ -70,11 +74,12 @@
         "Name": "Cruise",
         "Description": "Long",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "GkagDqux-boaT.jfif"
+        "ImageName": "GkagDqux-boaT.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       }
     },
-    "DateTime": "2021-08-26T14:47:46.8154417+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
+    "DateTime": "2021-08-26T14:47:46.8154417+02:00"
   },
   "4": {
     "Code": 4,
@@ -93,7 +98,9 @@
         "Name": "MyQueen",
         "Description": "Royal",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "OceanBoat.jfif"
+        "ImageName": "OceanBoat.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       },
       "1": {
         "Id": 1,
@@ -101,7 +108,9 @@
         "Name": "Cruise",
         "Description": "Long",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "GkagDqux-boaT.jfif"
+        "ImageName": "GkagDqux-boaT.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       },
       "3": {
         "Id": 3,
@@ -109,11 +118,12 @@
         "Name": "Revenge",
         "Description": "Small, but fast",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "Elwood-electric-woodenboat.jfif"
+        "ImageName": "Elwood-electric-woodenboat.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       }
     },
-    "DateTime": "2021-08-30T10:07:46.0915948+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
+    "DateTime": "2021-08-30T10:07:46.0915948+02:00"
   },
   "5": {
     "Code": 5,
@@ -132,7 +142,9 @@
         "Name": "Cruise",
         "Description": "Long",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "GkagDqux-boaT.jfif"
+        "ImageName": "GkagDqux-boaT.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       },
       "3": {
         "Id": 3,
@@ -140,11 +152,12 @@
         "Name": "Revenge",
         "Description": "Small, but fast",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "Elwood-electric-woodenboat.jfif"
+        "ImageName": "Elwood-electric-woodenboat.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       }
     },
-    "DateTime": "2021-08-31T09:45:26.3880822+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
+    "DateTime": "2021-08-31T09:45:26.3880822+02:00"
   },
   "6": {
     "Code": 6,
@@ -163,7 +176,9 @@
         "Name": "Cruise",
         "Description": "Long",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "GkagDqux-boaT.jfif"
+        "ImageName": "GkagDqux-boaT.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       },
       "3": {
         "Id": 3,
@@ -171,11 +186,12 @@
         "Name": "Revenge",
         "Description": "Small, but fast",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "Elwood-electric-woodenboat.jfif"
+        "ImageName": "Elwood-electric-woodenboat.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       }
     },
-    "DateTime": "2021-08-31T09:46:19.3808839+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
+    "DateTime": "2021-08-31T09:46:19.3808839+02:00"
   },
   "7": {
     "Code": 7,
@@ -194,11 +210,12 @@
         "Name": "MyQueen",
         "Description": "Hvis du søger saltvands fiskning og drømmer om at fange et stort tropy.",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "OceanBoat.jfif"
+        "ImageName": "OceanBoat.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       }
     },
-    "DateTime": "2021-08-31T10:42:08.1429224+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
+    "DateTime": "2021-08-31T10:42:08.1429224+02:00"
   },
   "8": {
     "Code": 8,
@@ -217,52 +234,46 @@
         "Name": "MyQueen",
         "Description": "Hvis du søger saltvands fiskning og drømmer om at fange et stort tropy.",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "OceanBoat.jfif"
+        "ImageName": "OceanBoat.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       }
     },
-    "DateTime": "2021-09-01T10:42:57.4057058+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
+    "DateTime": "2021-09-01T10:42:57.4057058+02:00"
   },
   "9": {
     "Code": 9,
     "User": {
-      "Id": 2,
-      "Name": "Jim",
-      "LastName": "Vster",
-      "Mail": "ves@Gmail.dk",
-      "PhoneNumber": "32445623",
+      "Id": 3,
+      "Name": "Timmy",
+      "LastName": "Reack",
+      "Mail": "Tim@hotmail.com",
+      "PhoneNumber": "98765433",
       "RegDate": "0001-01-01T00:00:00"
     },
     "Boats": {
-      "1": {
-        "Id": 1,
-        "Type": "Big",
-        "Name": "Cruise",
-        "Description": "Long",
+      "2": {
+        "Id": 2,
+        "Type": "Cruise",
+        "Name": "MyQueen",
+        "Description": "Hvis du søger saltvands fiskning og drømmer om at fange et stort tropy.",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "GkagDqux-boaT.jfif"
-      },
-      "3": {
-        "Id": 3,
-        "Type": "Electric-wood",
-        "Name": "Revenge",
-        "Description": "Small, but fast",
-        "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "Elwood-electric-woodenboat.jfif"
+        "ImageName": "OceanBoat.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       }
     },
-    "DateTime": "2021-09-01T11:30:31.8749994+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
+    "DateTime": "2021-09-03T10:07:18.613963+02:00"
   },
   "10": {
     "Code": 10,
     "User": {
-      "Id": 6,
-      "Name": "Bill",
-      "LastName": "Heckler",
-      "Mail": "Heck@mail.com",
-      "PhoneNumber": "34256211",
-      "RegDate": "2021-08-30T13:31:08.8991594+02:00"
+      "Id": 3,
+      "Name": "Timmy",
+      "LastName": "Reack",
+      "Mail": "Tim@hotmail.com",
+      "PhoneNumber": "98765433",
+      "RegDate": "0001-01-01T00:00:00"
     },
     "Boats": {
       "1": {
@@ -271,102 +282,11 @@
         "Name": "Cruise",
         "Description": "Long",
         "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "GkagDqux-boaT.jfif"
+        "ImageName": "GkagDqux-boaT.jfif",
+        "BookedFrom": "0001-01-01T00:00:00",
+        "BookedTo": "0001-01-01T00:00:00"
       }
     },
-    "DateTime": "2021-09-01T12:01:13.5866014+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
-  },
-  "11": {
-    "Code": 11,
-    "User": {
-      "Id": 6,
-      "Name": "Bill",
-      "LastName": "Heckler",
-      "Mail": "Heck@mail.com",
-      "PhoneNumber": "34256211",
-      "RegDate": "2021-08-30T13:31:08.8991594+02:00"
-    },
-    "Boats": {
-      "3": {
-        "Id": 3,
-        "Type": "Electric-wood",
-        "Name": "Revenge",
-        "Description": "Small, but fast",
-        "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "Elwood-electric-woodenboat.jfif"
-      }
-    },
-    "DateTime": "2021-09-01T12:01:50.5396115+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
-  },
-  "12": {
-    "Code": 12,
-    "User": {
-      "Id": 6,
-      "Name": "Bill",
-      "LastName": "Heckler",
-      "Mail": "Heck@mail.com",
-      "PhoneNumber": "34256211",
-      "RegDate": "2021-08-30T13:31:08.8991594+02:00"
-    },
-    "Boats": {
-      "2": {
-        "Id": 2,
-        "Type": "Cruise",
-        "Name": "MyQueen",
-        "Description": "Hvis du søger saltvands fiskning og drømmer om at fange et stort tropy.",
-        "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "OceanBoat.jfif"
-      }
-    },
-    "DateTime": "2021-09-01T14:10:37.4063172+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
-  },
-  "13": {
-    "Code": 13,
-    "User": {
-      "Id": 5,
-      "Name": "Drake",
-      "LastName": "Miach",
-      "Mail": "dr@homail.com",
-      "PhoneNumber": "80446352",
-      "RegDate": "0001-01-01T00:00:00"
-    },
-    "Boats": {
-      "2": {
-        "Id": 2,
-        "Type": "Cruise",
-        "Name": "MyQueen",
-        "Description": "Hvis du søger saltvands fiskning og drømmer om at fange et stort tropy.",
-        "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "OceanBoat.jfif"
-      }
-    },
-    "DateTime": "2021-09-01T16:18:01.4236639+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
-  },
-  "14": {
-    "Code": 14,
-    "User": {
-      "Id": 5,
-      "Name": "Drake",
-      "LastName": "Miach",
-      "Mail": "dr@homail.com",
-      "PhoneNumber": "80446352",
-      "RegDate": "0001-01-01T00:00:00"
-    },
-    "Boats": {
-      "2": {
-        "Id": 2,
-        "Type": "Cruise",
-        "Name": "MyQueen",
-        "Description": "Hvis du søger saltvands fiskning og drømmer om at fange et stort tropy.",
-        "DateTime": "2021-08-16T00:00:00",
-        "ImageName": "OceanBoat.jfif"
-      }
-    },
-    "DateTime": "2021-09-01T16:32:32.4442753+02:00",
-    "BookingDate": "0001-01-01T00:00:00"
+    "DateTime": "2021-09-03T12:12:26.5960885+02:00"
   }
 }

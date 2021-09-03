@@ -20,6 +20,8 @@ namespace ProtoBoatRazorPage.Models
             ErrorMessage = "registringen skal være efter {1}")]
         public DateTime DateTime { get; set; }
         public string ImageName { get; set; }
+        public DateTime BookedFrom { get; set; }
+        public DateTime BookedTo { get; set; }
         //public int UserId { get; set; }
     }
 }

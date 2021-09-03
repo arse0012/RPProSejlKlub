@@ -27,6 +27,14 @@ namespace ProtoBoatRazorPage.Services
             return _bookItems;
         }
 
+        public void UpdateBooking(Boat boat)
+        {
+            Boat foundBoat = _bookItems[boat.Id];
+            foundBoat.BookedTo = boat.BookedTo;
+            foundBoat.BookedFrom = boat.BookedFrom;
+            
+        }
+
         public void RemoveBooking(int orderId)
         {
             foreach (var boat in _bookItems)

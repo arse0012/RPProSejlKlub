@@ -30,6 +30,14 @@ namespace ProtoBoatRazorPage.Pages.Bookings
             BookedBoats = service.GetBookedBoat();
             return Page();
         }
+
+        public void OnPost(int id)
+        {
+            Boat boat = repo.GetBoat(id);
+            service.UpdateBooking(boat);
+            BookedBoats = service.GetBookedBoat();
+        }
+        
         public IActionResult OnPostDelete(int id)
         {
             service.RemoveBooking(id);

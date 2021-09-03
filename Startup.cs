@@ -50,6 +50,8 @@ namespace ProtoBoatRazorPage
                 app.UseHsts();
             }
 
+            //app.UseStatusCodePages();
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
